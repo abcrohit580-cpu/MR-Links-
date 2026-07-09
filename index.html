@@ -13,14 +13,14 @@
 body{
 margin:0;
 background:linear-gradient(135deg,#050008,#25004d);
-font-family:Arial,sans-serif;
+font-family:Arial;
 color:white;
 text-align:center;
 overflow-x:hidden;
 }
 
 
-/* Floating Logos */
+/* Background Floating Logos */
 
 .floating{
 position:fixed;
@@ -30,6 +30,7 @@ overflow:hidden;
 pointer-events:none;
 }
 
+
 .floating i{
 position:absolute;
 font-size:90px;
@@ -38,56 +39,110 @@ animation:float 15s infinite linear;
 }
 
 
-.floating i:nth-child(1){left:10%;top:15%;}
-.floating i:nth-child(2){left:75%;top:20%;animation-delay:3s;}
-.floating i:nth-child(3){left:20%;top:70%;animation-delay:6s;}
-.floating i:nth-child(4){left:80%;top:65%;animation-delay:9s;}
-.floating i:nth-child(5){left:45%;top:40%;animation-delay:12s;}
+.floating i:nth-child(1){
+left:10%;
+top:15%;
+}
+
+.floating i:nth-child(2){
+left:75%;
+top:20%;
+animation-delay:3s;
+}
+
+.floating i:nth-child(3){
+left:20%;
+top:70%;
+animation-delay:6s;
+}
+
+.floating i:nth-child(4){
+left:80%;
+top:65%;
+animation-delay:9s;
+}
+
+.floating i:nth-child(5){
+left:45%;
+top:40%;
+animation-delay:12s;
+}
+
 
 
 @keyframes float{
-0%{transform:translateY(0) rotate(0deg);}
-50%{transform:translateY(-100px) rotate(180deg);}
-100%{transform:translateY(0) rotate(360deg);}
+
+0%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-100px) rotate(180deg);
+}
+
+100%{
+transform:translateY(0) rotate(360deg);
+}
+
 }
 
 
 
 .container{
+
 position:relative;
 z-index:2;
 max-width:450px;
 margin:auto;
 padding:30px 20px;
+
 }
 
 
 
 .profile{
+
 width:120px;
 height:120px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid #b000ff;
 box-shadow:0 0 30px #b000ff;
+
 }
 
 
 
 h1{
+
 font-size:35px;
 margin:15px 0 5px;
+
 }
 
 
 
 .badge{
+
 display:inline-block;
 padding:8px 18px;
 border-radius:20px;
 background:#150020;
 border:1px solid #ff00ff;
 box-shadow:0 0 20px #ff00ff;
+font-size:14px;
+animation:pulse 2s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+50%{
+box-shadow:0 0 40px #ff00ff;
+}
+
 }
 
 
@@ -116,11 +171,11 @@ text-decoration:none;
 
 border-radius:18px;
 
-font-size:18px;
-
-border:1px solid #8000ff;
+font-size:19px;
 
 transition:.3s;
+
+border:1px solid #8000ff;
 
 backdrop-filter:blur(5px);
 
@@ -129,68 +184,82 @@ backdrop-filter:blur(5px);
 
 
 .link i{
+
 font-size:28px;
+
 }
 
 
 
 .link:hover{
-transform:translateY(-5px) scale(1.03);
+
+transform:translateY(-5px);
+
 }
 
 
 
 .instagram{
-border-color:#ff00aa;
+
 box-shadow:0 0 20px #ff00aa;
+border-color:#ff00aa;
+
 }
+
 
 
 .youtube{
-border-color:red;
+
 box-shadow:0 0 20px red;
+border-color:red;
+
 }
+
 
 
 .whatsapp{
-border-color:#00ff66;
+
 box-shadow:0 0 20px #00ff66;
+border-color:#00ff66;
+
 }
+
 
 
 .facebook{
-border-color:#008cff;
+
 box-shadow:0 0 20px #008cff;
+border-color:#008cff;
+
 }
+
 
 
 .pinterest{
-border-color:#ff0033;
+
 box-shadow:0 0 20px #ff0033;
+border-color:#ff0033;
+
 }
 
-
-.email{
-border-color:#EA4335;
-box-shadow:0 0 20px #EA4335;
-}
-
-
-.email i{
-color:#EA4335;
-}
 
 
 .coming{
-border-color:#ff00ff;
+
 box-shadow:0 0 25px #ff00ff;
+border-color:#ff00ff;
+
 }
+
 
 
 .footer{
+
 margin-top:30px;
 color:#888;
+
 }
+
 
 </style>
 
@@ -203,9 +272,13 @@ color:#888;
 <div class="floating">
 
 <i class="fa-brands fa-instagram"></i>
+
 <i class="fa-brands fa-youtube"></i>
+
 <i class="fa-brands fa-whatsapp"></i>
+
 <i class="fa-brands fa-facebook"></i>
+
 <i class="fa-brands fa-pinterest"></i>
 
 </div>
@@ -275,30 +348,18 @@ Pinterest
 
 
 
-<a class="link email" href="mailto:ahrohit958@gmail.com">
+<a class="link coming" href="#">
 
-<i class="fa-brands fa-google"></i>
-ahrohit958@gmail.com
-
-</a>
-
-
-
-<a class="link email" href="mailto:abcrohit580@gmail.com">
-
-<i class="fa-brands fa-google"></i>
-abcrohit580@gmail.com
+<i class="fa-solid fa-rocket"></i>
+Coming Soon 🚀
 
 </a>
-
-
-<a href="Resume.pdf" class="btn" target="_blank">📄 Resume</a>
 
 
 
 <div class="footer">
 
-© 2026 MR Links | Created by Rohit
+© 2026 MR Links
 
 </div>
 
@@ -308,4 +369,4 @@ abcrohit580@gmail.com
 
 </body>
 
-</html>
+  </html>
