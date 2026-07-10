@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MR Links</title>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <style>
-
 body{
 margin:0;
 background:linear-gradient(135deg,#050008,#25004d);
@@ -19,9 +14,7 @@ text-align:center;
 overflow-x:hidden;
 }
 
-
 /* Background Floating Logos */
-
 .floating{
 position:fixed;
 inset:0;
@@ -29,101 +22,43 @@ z-index:0;
 overflow:hidden;
 pointer-events:none;
 }
-
-
 .floating i{
 position:absolute;
 font-size:90px;
 opacity:.06;
 animation:float 15s infinite linear;
 }
-
-
-.floating i:nth-child(1){
-left:10%;
-top:15%;
-}
-
-.floating i:nth-child(2){
-left:75%;
-top:20%;
-animation-delay:3s;
-}
-
-.floating i:nth-child(3){
-left:20%;
-top:70%;
-animation-delay:6s;
-}
-
-.floating i:nth-child(4){
-left:80%;
-top:65%;
-animation-delay:9s;
-}
-
-.floating i:nth-child(5){
-left:45%;
-top:40%;
-animation-delay:12s;
-}
-
-
-
+.floating i:nth-child(1){left:10%;top:15%;}
+.floating i:nth-child(2){left:75%;top:20%;animation-delay:3s;}
+.floating i:nth-child(3){left:20%;top:70%;animation-delay:6s;}
+.floating i:nth-child(4){left:80%;top:65%;animation-delay:9s;}
+.floating i:nth-child(5){left:45%;top:40%;animation-delay:12s;}
+.floating i:nth-child(6){left:15%;top:50%;animation-delay:15s;}
 @keyframes float{
-
-0%{
-transform:translateY(0) rotate(0deg);
+0%{transform:translateY(0) rotate(0deg);}
+50%{transform:translateY(-100px) rotate(180deg);}
+100%{transform:translateY(0) rotate(360deg);}
 }
-
-50%{
-transform:translateY(-100px) rotate(180deg);
-}
-
-100%{
-transform:translateY(0) rotate(360deg);
-}
-
-}
-
-
 
 .container{
-
 position:relative;
 z-index:2;
 max-width:450px;
 margin:auto;
 padding:30px 20px;
-
 }
-
-
-
 .profile{
-
 width:120px;
 height:120px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid #b000ff;
 box-shadow:0 0 30px #b000ff;
-
 }
+h1{font-size:35px;margin:15px 0 5px;}
 
-
-
-h1{
-
-font-size:35px;
-margin:15px 0 5px;
-
-}
-
-
-
+/* TYPING EFFECT BADGE */
 .badge{
-
 display:inline-block;
 padding:8px 18px;
 border-radius:20px;
@@ -131,242 +66,160 @@ background:#150020;
 border:1px solid #ff00ff;
 box-shadow:0 0 20px #ff00ff;
 font-size:14px;
+min-width:150px;
+height:20px;
 animation:pulse 2s infinite;
-
 }
-
-
-
-@keyframes pulse{
-
-50%{
-box-shadow:0 0 40px #ff00ff;
+#typing-text, #typing-text2{
+border-right: 2px solid #ff00ff;
+animation: blink-caret 0.75s step-end infinite;
 }
-
+@keyframes blink-caret{
+50%{border-color: transparent;}
 }
+@keyframes pulse{50%{box-shadow:0 0 40px #ff00ff;}}
 
-
-
-p{
-color:#ccc;
+/* SCROLLING/TYPING TEXT - CHHOTA SIZE */
+.scroll-text{
+width:100%;
+background:rgba(18,0,31,.85);
+border:1px solid #8000ff;
+border-radius:15px;
+padding:12px 0;
+margin:15px 0;
+box-shadow:0 0 15px #8000ff;
 }
-
-
+.scroll-line{
+margin:6px 0;
+font-size:13px; /* SIZE CHHOTA KIYA */
+font-weight:bold;
+color:#ff00ff;
+min-height:18px; /* Size fix rahe */
+}
 
 .link{
-
 display:flex;
 align-items:center;
 justify-content:center;
 gap:15px;
-
 margin:15px 0;
 padding:16px;
-
 background:rgba(18,0,31,.85);
-
 color:white;
-
 text-decoration:none;
-
 border-radius:18px;
-
 font-size:19px;
-
 transition:.3s;
-
 border:1px solid #8000ff;
-
 backdrop-filter:blur(5px);
-
 }
+.link i{font-size:28px;}
+.link:hover{transform:translateY(-5px);}
 
-
-
-.link i{
-
-font-size:28px;
-
-}
-
-
-
-.link:hover{
-
-transform:translateY(-5px);
-
-}
-
-
-
-.instagram{
-
-box-shadow:0 0 20px #ff00aa;
-border-color:#ff00aa;
-
-}
-
-
-
-.youtube{
-
-box-shadow:0 0 20px red;
-border-color:red;
-
-}
-
-
-
-.whatsapp{
-
-box-shadow:0 0 20px #00ff66;
-border-color:#00ff66;
-
-}
-
-
-
-.facebook{
-
-box-shadow:0 0 20px #008cff;
-border-color:#008cff;
-
-}
-
-
-
-.pinterest{
-
-box-shadow:0 0 20px #ff0033;
-border-color:#ff0033;
-
-}
-
-
-
-.coming{
-
-box-shadow:0 0 25px #ff00ff;
-border-color:#ff00ff;
-
-}
-
-
-
-.footer{
-
-margin-top:30px;
-color:#888;
-
-}
-
-
+.instagram{box-shadow:0 0 20px #ff00aa;border-color:#ff00aa;}
+.youtube{box-shadow:0 0 20px red;border-color:red;}
+.whatsapp{box-shadow:0 0 20px #00ff66;border-color:#00ff66;}
+.facebook{box-shadow:0 0 20px #008cff;border-color:#008cff;}
+.pinterest{box-shadow:0 0 20px #ff0033;border-color:#ff0033;}
+.telegram{box-shadow:0 0 20px #229ED9;border-color:#229ED9;}
+.freefire{box-shadow:0 0 20px #FFA500;border-color:#FFA500;}
+.coming{box-shadow:0 0 25px #ff00ff;border-color:#ff00ff;}
+.footer{margin-top:30px;color:#888;}
 </style>
-
 </head>
-
-
 <body>
 
-
 <div class="floating">
-
 <i class="fa-brands fa-instagram"></i>
-
 <i class="fa-brands fa-youtube"></i>
-
 <i class="fa-brands fa-whatsapp"></i>
-
 <i class="fa-brands fa-facebook"></i>
-
 <i class="fa-brands fa-pinterest"></i>
-
+<i class="fa-solid fa-gamepad"></i>
 </div>
-
-
 
 <div class="container">
-
-
 <img src="myphoto.jpg" class="profile">
-
-
 <h1>MR Links</h1>
 
+<!-- TYPING BADGE 1 -->
+<div class="badge"><span id="typing-text"></span></div>
 
-<div class="badge">
-🔥 MR Creator
+<!-- TYPING TEXT 2 LINES - CHHOTA -->
+<div class="scroll-text">
+<p class="scroll-line"><span id="typing-text2"></span></p>
+<p class="scroll-line"><span id="typing-text3"></span></p>
 </div>
 
+<a class="link instagram" href="https://www.instagram.com/mr__rohit__ra2?igsh=MWR" target="_blank">
+<i class="fa-brands fa-instagram"></i>Instagram</a>
 
-<p>All My Important Links 🚀</p>
+<a class="link youtube" href="https://youtube.com/@feelingsforyouuu?si=LLmQ88AcLloWWpvH" target="_blank">
+<i class="fa-brands fa-youtube"></i>YouTube</a>
 
+<a class="link whatsapp" href="https://chat.whatsapp.com/EQAgSmLAxoK5kJAeZmY796" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>WhatsApp Group</a>
 
+<a class="link facebook" href="https://www.facebook.com/profile.php?id=100027988593829" target="_blank">
+<i class="fa-brands fa-facebook"></i>Facebook</a>
 
-<a class="link instagram" href="https://www.instagram.com/mr__rohit__ra2?igsh=MWR">
+<a class="link pinterest" href="https://pin.it/EJeAg5I2O" target="_blank">
+<i class="fa-brands fa-pinterest"></i>Pinterest</a>
 
-<i class="fa-brands fa-instagram"></i>
-Instagram
+<a class="link telegram" href="https://t.me/+vCLxv7OvdNwwNjll" target="_blank">
+<i class="fa-brands fa-telegram"></i>Telegram Channel</a>
 
+<!-- FREE FIRE ID BUTTON -->
+<a class="link freefire" href="#" onclick="copyFFID()">
+<i class="fa-solid fa-gamepad"></i>
+<div>
+<b>Free Fire ID</b><br>
+<small>2107294185</small>
+</div>
 </a>
 
+<a class="link coming" href="#"><i class="fa-solid fa-rocket"></i>Coming Soon 🚀</a>
 
-
-<a class="link youtube" href="https://youtube.com/@feelingsforyouuu?si=LLmQ88AcLloWWpvH">
-
-<i class="fa-brands fa-youtube"></i>
-YouTube
-
-</a>
-
-
-
-<a class="link whatsapp" href="https://chat.whatsapp.com/EQAgSmLAxoK5kJAeZmY796">
-
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp Group
-
-</a>
-
-
-
-<a class="link facebook" href="https://www.facebook.com/profile.php?id=100027988593829">
-
-<i class="fa-brands fa-facebook"></i>
-Facebook
-
-</a>
-
-
-
-<a class="link pinterest" href="https://pin.it/EJeAg5I2O">
-
-<i class="fa-brands fa-pinterest"></i>
-Pinterest
-
-</a>
-
-
-
-<a class="link coming" href="#">
-
-<i class="fa-solid fa-rocket"></i>
-Coming Soon 🚀
-
-</a>
-
-
-
-<div class="footer">
-
-© 2026 MR Links
-
+<div class="footer">© 2026 MR Links</div>
 </div>
 
+<script>
+// TYPING EFFECT FOR ALL
+const text1 = "🔥 MR Creator";
+const text2 = "🚀 Welcome to My Site 🚀";
+const text3 = "🔥 All My Important Links 🔥";
+let i1 = 0, i2 = 0, i3 = 0;
 
-</div>
+function typeAll(){
+    // Line 1
+    if(i1 < text1.length){
+        document.getElementById("typing-text").innerHTML += text1.charAt(i1);
+        i1++;
+    }
+    // Line 2 - thoda delay ke baad
+    else if(i2 < text2.length){
+        document.getElementById("typing-text2").innerHTML += text2.charAt(i2);
+        i2++;
+    }
+    // Line 3
+    else if(i3 < text3.length){
+        document.getElementById("typing-text3").innerHTML += text3.charAt(i3);
+        i3++;
+    }
+    else{
+        return; // Sab ho gaya to ruk jao
+    }
+    setTimeout(typeAll, 80); // Speed
+}
+window.onload = typeAll;
 
+// FREE FIRE ID COPY FUNCTION
+function copyFFID(){
+    let ffid = "2107294185";
+    navigator.clipboard.writeText(ffid);
+    alert("Free Fire ID Copied: " + ffid + " ✅");
+}
+</script>
 
 </body>
-
-  </html>
+</html>
